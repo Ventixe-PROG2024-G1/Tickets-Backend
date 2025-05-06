@@ -21,12 +21,6 @@ public class TicketService(ITicketRepository repository, IMemoryCache cache) : I
 
         return await SetCache();
 
-
-
-        //var tickets = await _ticketRepository.GetAllAsync();
-        //return tickets.Select(x => MapToViewModel(x));
-
-
     }
 
     public async Task<TicketsViewModel?> GetByIdAsync(Guid id)
@@ -54,7 +48,7 @@ public class TicketService(ITicketRepository repository, IMemoryCache cache) : I
             return MapToViewModel(entity);
         }
         return null;
-        //return result ? MapToViewModel(entity) : null;
+        
     }
 
 

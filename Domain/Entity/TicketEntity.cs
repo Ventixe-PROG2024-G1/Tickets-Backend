@@ -10,7 +10,7 @@ public class TicketEntity
     public decimal Price { get; set; }
     public bool IsStanding { get; set; }
     public int Quantity { get; set; }
-    public TicketTier Tier { get; set; } //får se hur det där blir när man skapar 
+    public TicketTier Tier { get; set; } 
 
     public Guid EventId { get; set; } //oklart om det ska va såhär
 }
