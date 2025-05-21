@@ -10,7 +10,7 @@ public class CreateTickets
     [Required]
     public int Quantity { get; set; }
     [Required]
-    public bool IsStanding { get; set; }
+    public string TierDescription { get; set; } = string.Empty;
     [Required]
     public TicketTier Tier { get; set; }
     //[Required]
