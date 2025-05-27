@@ -13,7 +13,7 @@ public class TicketEntity
    
     public int Quantity { get; set; }
     public string TierDescription { get; set; } = null!;
-    public TicketTier Tier { get; set; } 
+    public TicketTier Tier { get; set; }
 
-    public Guid? EventId { get; set; } 
+    public Guid? EventId { get; set; }
 }

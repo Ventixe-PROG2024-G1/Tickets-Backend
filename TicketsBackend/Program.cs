@@ -5,6 +5,7 @@ using Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
+using Presentation.Extensions.Middlewares;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,6 +43,8 @@ app.MapOpenApi();
 
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<DefaultApiKeyMiddleware>();
 
 app.UseAuthorization();
 

@@ -13,6 +13,6 @@ public class CreateTickets
     public string TierDescription { get; set; } = string.Empty;
     [Required]
     public TicketTier Tier { get; set; }
-    //[Required]
-    public Guid? EventId { get; set; }
+    
+    public string? EventId { get; set; }
 }
