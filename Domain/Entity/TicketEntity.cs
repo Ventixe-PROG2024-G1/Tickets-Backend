@@ -15,5 +15,5 @@ public class TicketEntity
     public string TierDescription { get; set; } = null!;
     public TicketTier Tier { get; set; }
 
-    public Guid? EventId { get; set; }
+    public Guid EventId { get; set; }
 }

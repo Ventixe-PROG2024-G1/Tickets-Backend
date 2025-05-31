@@ -9,5 +9,6 @@ public class TicketsViewModel
     public int Quantity { get; set; }
     public TicketTier Tiers { get; set; }
     public string TierDescription { get; set; } = null!;
+    public Guid EventId { get; set; }
 
 }
