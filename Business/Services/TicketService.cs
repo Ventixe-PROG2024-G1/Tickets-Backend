@@ -38,7 +38,7 @@ public class TicketService(ITicketRepository repository, IMemoryCache cache) : I
             Quantity = ticket.Quantity,
             TierDescription = ticket.TierDescription,
             Tier = ticket.Tier,
-            //EventId = dto.EventId
+            EventId = ticket.EventId,
         };
 
         var result = await _ticketRepository.AddAsync(entity);
@@ -73,7 +73,7 @@ public class TicketService(ITicketRepository repository, IMemoryCache cache) : I
         existingTicket.Quantity = ticket.Quantity;
         existingTicket.TierDescription = ticket.TierDescription;
         existingTicket.Tier = ticket.Tier;
-        //existingTicket.EventId = dto.EventId;
+        existingTicket.EventId = ticket.EventId;
 
         var result = await _ticketRepository.UpdateAsync(existingTicket);
         if (result)
@@ -91,7 +91,8 @@ public class TicketService(ITicketRepository repository, IMemoryCache cache) : I
             Price = entity.Price,
             Quantity = entity.Quantity,
             TierDescription = entity.TierDescription,
-            Tiers = entity.Tier
+            Tiers = entity.Tier,
+            EventId = entity.EventId
         };
     }
 
@@ -106,7 +107,8 @@ public class TicketService(ITicketRepository repository, IMemoryCache cache) : I
             Price = entity.Price,
             Quantity = entity.Quantity,
             TierDescription= entity.TierDescription,
-            Tiers = entity.Tier 
+            Tiers = entity.Tier,
+            EventId = entity.EventId
         });
 
         _cache.Set(_cacheKey_All, tickets, TimeSpan.FromMinutes(30));

@@ -14,5 +14,5 @@ public class CreateTickets
     [Required]
     public TicketTier Tier { get; set; }
     [Required]
-    public string EventId { get; set; } = null!;
+    public Guid EventId { get; set; } 
 }
